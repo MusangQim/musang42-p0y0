@@ -1,6 +1,9 @@
 def ft_seed_inventory(seed_type: str, quantity: int, unit: str)->None:
-    print(seed_type, quantity, unit)
-
-
-ft_seed_inventory("broccoli", 20, "kg")
-ft_seed_inventory("sawi", "ten", "kg")
+    if unit == "packets":
+        print(f"{seed_type} seeds: {quantity} {unit} available")
+    elif unit == "grams":
+        print(f"{seed_type} seeds: {quantity} {unit} total")
+    elif unit == "area":
+        print(f"{seed_type} seeds: covers {quantity} square meters")
+    else:
+        print("Unknown unit type")
